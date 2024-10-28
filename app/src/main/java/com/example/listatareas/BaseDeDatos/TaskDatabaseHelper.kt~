@@ -11,7 +11,7 @@ data class Task(val id: Int, val title: String?, val done: Boolean)
 class TaskDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
     companion object {
-        private const val DATABASE_VERSION = 3
+        private const val DATABASE_VERSION = 3 // Increment the database version
         private const val DATABASE_NAME = "TaskDatabase.db"
         private const val TABLE_NAME = "tasks"
         private const val COLUMN_ID = "id"
