@@ -10,6 +10,8 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
+import com.example.listatareas.R
 import com.example.listatareas.Screens.CompletedTasksScreen
 import com.example.listatareas.Screens.PendingTasksScreen
 import com.example.listatareas.Screens.TaskScreen
@@ -27,9 +29,9 @@ fun TaskApp(context: Context) {
                 title = {
                     Text(
                        text= when (currentScreen) {
-                            Screen.TaskScreen -> "Lista de tareas"
-                            Screen.Pending -> "Lista de tareas pendientes"
-                            Screen.Completed -> "Lista de tareas completadas"
+                           Screen.TaskScreen -> stringResource(R.string.task_list)
+                           Screen.Pending -> stringResource(R.string.pending_task_list)
+                           Screen.Completed -> stringResource(R.string.completed_task_list)
                         },
                         color = Color.White
                     )

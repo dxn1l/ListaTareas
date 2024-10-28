@@ -8,8 +8,10 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.example.listatareas.BaseDeDatos.TaskDatabaseHelper
+import com.example.listatareas.R
 import com.example.listatareas.ui.theme.azulClarito
 
 @Composable
@@ -47,7 +49,7 @@ fun PendingTasksScreen(context: Context, navigateBack: () -> Unit) {
                 containerColor = azulClarito
             )
         ) {
-            Text("Volver a lista de Tareas")
+            Text(stringResource(R.string.back_to_task_list))
         }
     }
 }
