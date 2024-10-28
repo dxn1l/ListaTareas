@@ -1,0 +1,4 @@
+package com.example.listatareas.BaseDeDatos
+
+class AppDatabase {
+}

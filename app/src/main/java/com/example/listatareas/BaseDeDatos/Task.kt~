@@ -1,0 +1,7 @@
+package com.example.listatareas.BaseDeDatos
+
+data class Task(
+
+    
+
+)
