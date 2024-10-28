@@ -3,7 +3,7 @@ package com.example.listatareas
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import com.example.listatareas.Screens.TaskScreen
+import com.example.listatareas.Navigation.TaskApp
 import com.example.listatareas.ui.theme.ListaTareasTheme
 
 class MainActivity : ComponentActivity() {
@@ -12,7 +12,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             ListaTareasTheme {
-                TaskScreen(this)
+                TaskApp(this)
             }
         }
     }
