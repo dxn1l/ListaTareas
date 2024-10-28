@@ -10,8 +10,10 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.example.listatareas.BaseDeDatos.TaskDatabaseHelper
+import com.example.listatareas.R
 import com.example.listatareas.ui.theme.azulClarito
 
 @Composable
@@ -31,7 +33,7 @@ fun TaskScreen(context: Context, navigateToPending: () -> Unit, navigateToComple
                 containerColor = azulClarito
             )
         ) {
-            Text("Añadir Tarea")
+            Text(stringResource(R.string.add_task))
         }
         Spacer(modifier = Modifier.height(16.dp))
         Box(modifier = Modifier.weight(1f)) {
@@ -73,7 +75,7 @@ fun TaskScreen(context: Context, navigateToPending: () -> Unit, navigateToComple
                                         containerColor = azulClarito
                                     )
                                 ) {
-                                    Text("Eliminar")
+                                    Text(stringResource(R.string.delete))
                                 }
                             }
                         }
@@ -94,7 +96,7 @@ fun TaskScreen(context: Context, navigateToPending: () -> Unit, navigateToComple
                     containerColor = azulClarito
                 )
             ) {
-                Text("Tareas Pendientes")
+                Text(stringResource(R.string.pending_tasks))
             }
             Button(
                 onClick = navigateToCompleted,
@@ -102,7 +104,7 @@ fun TaskScreen(context: Context, navigateToPending: () -> Unit, navigateToComple
                     containerColor = azulClarito
                 )
             ) {
-                Text("Tareas Completadas")
+                Text(stringResource(R.string.completed_tasks))
             }
         }
     }
@@ -110,7 +112,7 @@ fun TaskScreen(context: Context, navigateToPending: () -> Unit, navigateToComple
     if (showDialog) {
         AlertDialog(
             onDismissRequest = { showDialog = false },
-            title = { Text("Añadir Tarea") },
+            title = { Text(stringResource(R.string.add_task_title)) },
             text = {
                 Column {
                     BasicTextField(
@@ -121,7 +123,7 @@ fun TaskScreen(context: Context, navigateToPending: () -> Unit, navigateToComple
                             .padding(8.dp),
                         decorationBox = { innerTextField ->
                             if (taskTitle.isEmpty()) {
-                                Text("Tarea")
+                                Text(stringResource(R.string.task))
                             }
                             innerTextField()
                         }
@@ -141,7 +143,7 @@ fun TaskScreen(context: Context, navigateToPending: () -> Unit, navigateToComple
                         containerColor = azulClarito
                     )
                 ) {
-                    Text("Añadir")
+                    Text(stringResource(R.string.add))
                 }
             },
             dismissButton = {
@@ -151,7 +153,7 @@ fun TaskScreen(context: Context, navigateToPending: () -> Unit, navigateToComple
                         containerColor = azulClarito
                     )
                 ) {
-                    Text("Cancelar")
+                    Text(stringResource(R.string.cancel))
                 }
             }
         )
